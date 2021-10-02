@@ -8,12 +8,22 @@
       <title>Digital Clock</title>
       <link rel="stylesheet" href="css/style.css">
    </head>
-   <body>
+   <body >
+     <div class="header">
+       <div class="right-container">
+        <label class="switch">
+          <input type="checkbox" onclick="handleToggle(this);">
+          <span class="slider round"></span>
+        </label>
+       </div>
+     </div>
+     <div class="grid">
       <div class="wrapper">
          <div class="display">
             <div id="time"></div>
          </div>
       </div>
+    </div>
       <script>
          setInterval(()=>{
            const time = document.querySelector(".display #time");
@@ -42,6 +52,10 @@
            }
            time.textContent = hours + ":" + minutes + ":" + seconds + ":" + millisec + " " + day_night;
          });
+
+         const handleToggle = () => {
+           document.querySelector("html").classList.toggle("toggleOn");
+         }
       </script>
    </body>
 </html>
