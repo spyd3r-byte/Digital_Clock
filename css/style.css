@@ -1,15 +1,17 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
-html, .grid{
+
+html,
+.grid {
   display: grid;
   height: 100%;
   place-items: center;
- background: #000;
 }
-.wrapper{
+
+.wrapper {
   height: 100px;
   width: 420px;
   position: relative;
@@ -17,8 +19,12 @@ html, .grid{
   border-radius: 10px;
   cursor: default;
   animation: animate 1.5s linear infinite;
+  background: #111;
+  padding: 0px 20px;
+  box-shadow: 0px 0px 25px #fff;
 }
-.wrapper .display{
+
+.wrapper .display {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -30,7 +36,8 @@ html, .grid{
   border-radius: 6px;
   text-align: center;
 }
-.display #time{
+
+.display #time {
   line-height: 85px;
   color: rgb(0, 0, 0);
   font-size: 50px;
@@ -41,15 +48,22 @@ html, .grid{
   -webkit-text-fill-color: transparent;
   animation: animate 1.5s linear infinite;
 }
+
 @keyframes animate {
-  100%{
+  100% {
     filter: hue-rotate(360deg);
   }
 }
 
-html.toggleOn, .toggleOn .grid {
+html.toggleOn,
+.toggleOn .grid {
   background: #fbfbfb;
   transition: all .1s ease-in-out;
+}
+
+html.toggleOn .wrapper {
+  background: #eee;
+  box-shadow: 0px 0px 25px #000;
 }
 
 .header {
@@ -57,17 +71,20 @@ html.toggleOn, .toggleOn .grid {
   top: 1rem;
   right: 1rem;
 }
+
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
 }
+
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -92,15 +109,15 @@ html.toggleOn, .toggleOn .grid {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #303030;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #303030;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -114,20 +131,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
 body {
-    background: black;
-}
-
-.clock {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #17D4FE;
-    font-size: 60px;
-    font-family: Orbitron;
-    letter-spacing: 7px;
-   
-
-
+  background: black;
 }
